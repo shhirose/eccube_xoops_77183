@@ -7,6 +7,21 @@
 <body>
 <div>
     <style type="text/css">
+        .clearfix:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .wrapper {
+            width: 720px;
+        }
+        .top-block1,
+        #slideshow {
+            float: left;
+        }
+        .top-block1 p {
+            margin: 0;
+        }
         #slideshow {
             position: relative;
             width: 360px;
@@ -65,21 +80,23 @@
         setInterval( "slideSwitch()", 5000 );
     });
     </script>
-    <div class="top-block1">
-        <p>
-            <a href="リンク先"><img src="画像１" /><br />
-            コメント</a>
-        </p>
-    </div>
-    <div id="slideshow">
-        <p class="active">
-            <a href="リンク先"><img src="./img/img1.png" alt="画像1"></a>
-            キャプション1
-        </p>
-        <p>
-            <a href="リンク先"><img src="./img/img2.png" alt="画像2"></a>
-            キャプション2
-        </p>
+    <div class="wrapper clearfix">
+        <div class="top-block1">
+            <p>
+                <a href="リンク先"><img src="./img/img-left.png" /><br />
+                コメント</a>
+            </p>
+        </div>
+        <div id="slideshow">
+            <p class="active">
+                <a href="リンク先"><img src="./img/img1.png" alt="画像1"></a>
+                キャプション1
+            </p>
+            <p>
+                <a href="リンク先"><img src="./img/img2.png" alt="画像2"></a>
+                キャプション2
+            </p>
+        </div>
     </div>
 </div>
 </body>
